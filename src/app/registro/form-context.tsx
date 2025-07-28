@@ -1,14 +1,14 @@
 import { createFormHook, createFormHookContexts } from '@tanstack/react-form';
-import { FormInput } from './form-input';
-import { SuscribeButton } from './button-submit';
-import { Combobox } from './input-select';
-import ImputCheckbox from './input-checkbox';
+import { SuscribeButton } from '../(components)/button-submit';
+import { InputCombobox } from '../(components)/input-select';
+import ImputCheckbox from '../(components)/input-checkbox';
+import { InputText } from '../(components)/input-text';
 
 export const { fieldContext, formContext, useFieldContext, useFormContext } =
   createFormHookContexts();
 
 export const { useAppForm } = createFormHook({
-  fieldComponents: { FormInput, Combobox, ImputCheckbox },
+  fieldComponents: { InputText, InputCombobox, ImputCheckbox },
   formComponents: { SuscribeButton },
   fieldContext,
   formContext,

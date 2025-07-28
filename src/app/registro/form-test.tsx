@@ -1,6 +1,5 @@
 import { useAppForm } from './form-context';
 import { pipe, object, string, boolean, minLength } from 'valibot';
-import { Combobox } from './input-select';
 
 const UserSchema = object({
   name: pipe(string(), minLength(3)),
@@ -29,19 +28,19 @@ const FormTest = () => {
         form.handleSubmit();
       }}
     >
+      {<form.AppField name='name' children={(field) => <field.InputText />} />}
+
       {
         <form.AppField
-          name='name'
-          children={(field) => <field.FormInput field={field} label='name' />}
+          name='role'
+          children={(field) => <field.InputCombobox />}
         />
       }
-
-      {<form.AppField name='role' children={(field) => <field.Combobox />} />}
 
       {
         <form.AppField
           name='isValid'
-          children={(field) => <field.ImputCheckbox label='isValid' />}
+          children={(field) => <field.ImputCheckbox />}
         />
       }
       <form.AppForm>

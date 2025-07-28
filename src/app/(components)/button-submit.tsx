@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { useFormContext } from './form-context';
+import { useFormContext } from '../registro/form-context';
 
 export const SuscribeButton = ({ label }: { label: string }) => {
   const form = useFormContext();

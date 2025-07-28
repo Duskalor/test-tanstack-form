@@ -1,6 +1,6 @@
 import { AnyFieldApi } from '@tanstack/react-form';
 import React from 'react';
-import { useFieldContext } from './form-context';
+import { useFieldContext } from '../registro/form-context';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
@@ -20,11 +20,10 @@ const ErrorMessage = ({ field }: { field: AnyFieldApi }) => {
 };
 
 interface FormInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  field?: AnyFieldApi;
-  label: string;
+  label?: string;
 }
 
-export const FormInput = ({ label, ...props }: FormInputProps) => {
+export const InputText = ({ label, ...props }: FormInputProps) => {
   const field = useFieldContext<string>();
   return (
     <>

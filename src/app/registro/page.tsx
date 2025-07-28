@@ -5,7 +5,7 @@ import '../globals.css';
 const page = () => {
   return (
     <div>
-      <h1 className='text-3xl text-red-900'>testing form</h1>
+      <h1 className='text-3xl text-red-900'>Registro form</h1>
       <FormTest />
     </div>
   );

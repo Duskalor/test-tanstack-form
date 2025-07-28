@@ -18,8 +18,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { useState } from 'react';
-import { useFieldContext } from './form-context';
-import { AnyFieldApi } from '@tanstack/react-form';
+import { useFieldContext } from '../registro/form-context';
 
 const frameworks = [
   {
@@ -44,11 +43,10 @@ const frameworks = [
   },
 ];
 
-export const Combobox = () => {
+export const InputCombobox = () => {
   const field = useFieldContext<string>();
   const [open, setOpen] = useState(false);
 
-  console.log(field.state.value);
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
