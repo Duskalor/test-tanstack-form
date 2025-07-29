@@ -18,7 +18,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { useState } from 'react';
-import { useFieldContext } from '../registro/form-context';
+import { useFieldContext } from './form-context';
 
 const frameworks = [
   {

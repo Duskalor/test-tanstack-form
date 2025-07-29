@@ -1,6 +1,6 @@
 import { AnyFieldApi } from '@tanstack/react-form';
 import React from 'react';
-import { useFieldContext } from '../registro/form-context';
+import { useFieldContext } from './form-context';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
